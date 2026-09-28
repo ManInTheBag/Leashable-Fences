@@ -4,11 +4,14 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class LeashableFences : JavaPlugin() {
 
+    private val listener = ItemClickListener(this)
+
     override fun onEnable() {
-        server.pluginManager.registerEvents(ItemClickListener(this), this)
+        server.pluginManager.registerEvents(listener, this)
+        listener.start()
     }
 
     override fun onDisable() {
-        // Plugin shutdown logic
+        listener.shutdown()
     }
 }

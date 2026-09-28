@@ -1,4 +1,6 @@
 name: leashable_fences
-version: '1.1'
+version: '1.2'
 main: net.maninthebag.leashableFences.LeashableFences
 api-version: '1.21'
+description: Allows players to leash fences together for decoration.
+authors: [ManInTheBag]
